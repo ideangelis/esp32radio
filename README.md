@@ -13,17 +13,17 @@ Be advised, this is a plain and simple firmware, you can modify as you wish to m
 - Momentary switch push button
 
 # Default GPIO
-SSD1306
-D18 SDA
-D19 SCL
+      SSD1306
+      D18 SDA
+      D19 SCL
 
-MAX98357A
-D26 BCLK
-D25 LRC
-D27 DIN
+      MAX98357A
+      D26 BCLK
+      D25 LRC
+      D27 DIN
 
-BUTTON SWITCH
-D14
+      BUTTON SWITCH
+      D14
 
 # What it does?
 This firmware makes boot the ESP32 and creates an Access Point for you to connect the first time, common IP used on the ESP32 192.168.4.1, there you can configure your home's wifi.
