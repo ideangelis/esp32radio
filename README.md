@@ -41,26 +41,24 @@ Also, when no alarm is activated you can push the button and it start streaming 
 
 # Code details
 
-- If you want to config a different SSID and password for AP, you can change the next code line, line 123
+- If you want to config a different SSID and password for AP, you can change the next code line, line 124
 
-// ================= AP =================
-void startAP() {
-  WiFi.softAP("Esp32 Clock Radio", "ESP32Clock");
-}
+      void startAP() {
+        WiFi.softAP("Esp32 Clock Radio", "ESP32Clock");
+      }
 
 - There is a timezone hided because I did not use, line 29
 Is not included in the HTML.
 
-String tz = "ART3";
+      String tz = "ART3";
 
-- If you configure at least one alarm, a bell will display on the SSD1306, you can change this icon on line 18
+- If you configure at least one alarm, a bell will display on the SSD1306, you can change this icon on line 19
 
-// ================= BELL =================
-const unsigned char bell_icon [] PROGMEM = {
-  0x00, 0x00, 0x01, 0x80, 0x03, 0xc0, 0x07, 0xe0, 0x07, 0xe0,
-  0x0f, 0xf0, 0x0f, 0xf0, 0x0f, 0xf0, 0x0f, 0xf0, 0x0f, 0xf0,
-  0x1f, 0xf8, 0x1f, 0xf8, 0x00, 0x00, 0x03, 0xc0, 0x01, 0x80, 0x00, 0x00
-};
+       const unsigned char bell_icon [] PROGMEM = {
+        0x00, 0x00, 0x01, 0x80, 0x03, 0xc0, 0x07, 0xe0, 0x07, 0xe0,
+        0x0f, 0xf0, 0x0f, 0xf0, 0x0f, 0xf0, 0x0f, 0xf0, 0x0f, 0xf0,
+        0x1f, 0xf8, 0x1f, 0xf8, 0x00, 0x00, 0x03, 0xc0, 0x01, 0x80, 0x00, 0x00
+      };
 
 - When an alarm is activated, you will see the bell icon shaking on the display, you can change how much it moves on line 283
 
